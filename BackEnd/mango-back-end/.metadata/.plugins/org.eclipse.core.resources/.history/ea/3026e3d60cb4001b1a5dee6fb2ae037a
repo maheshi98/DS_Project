@@ -1,0 +1,94 @@
+package com.example.Mango_Restaurant.Model;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "Salary")
+public class Salary {
+	 @Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	 long id;
+	
+	@Column(name="empID")
+	String empID;
+	
+	@Column(name="basic_salary")
+	String basicSalary;
+	
+	@Column(name="deduction")
+	String deduction;
+	
+	@Column(name="allowance")
+	String allowance;
+	
+	@Column(name="net_salary")
+	String netSalary;
+
+	public Salary() {
+		
+	}
+
+	public Salary( String empID, String basicSalary, String deduction, String allowance, String netSalary) {
+		super();
+		this.empID = empID;
+		this.basicSalary = basicSalary;
+		this.deduction = deduction;
+		this.allowance = allowance;
+		this.netSalary = netSalary;
+	}
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public String getEmpID() {
+		return empID;
+	}
+
+	public void setEmpID(String empID) {
+		this.empID = empID;
+	}
+
+	public String getBasicSalary() {
+		return basicSalary;
+	}
+
+	public void setBasicSalary(String basicSalary) {
+		this.basicSalary = basicSalary;
+	}
+
+	public String getDeduction() {
+		return deduction;
+	}
+
+	public void setDeduction(String deduction) {
+		this.deduction = deduction;
+	}
+
+	public String getAllowance() {
+		return allowance;
+	}
+
+	public void setAllowance(String allowance) {
+		this.allowance = allowance;
+	}
+
+	public String getNetSalary() {
+		return netSalary;
+	}
+
+	public void setNetSalary(String netSalary) {
+		this.netSalary = netSalary;
+	}
+
+	
+}
